@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_130d872a61934953a0627e0833ce87cf {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_130d872a61934953a0627e0833ce87cf" ></div>
+        
+</body>
+<script>    
+    
+            var map_130d872a61934953a0627e0833ce87cf = L.map(
+                "map_130d872a61934953a0627e0833ce87cf",
+                {
+                    center: [34.15761, -118.424058],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 11,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b953965026ed40ffa15d0bd9476b62d1 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_130d872a61934953a0627e0833ce87cf);
+        
+    
+            var circle_922244d446ea4bc0ba5ee7e3b0499835 = L.circle(
+                [34.15761, -118.424058],
+                {"bubblingMouseEvents": true, "color": "#3186cc", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3186cc", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2000, "stroke": true, "weight": 3}
+            ).addTo(map_130d872a61934953a0627e0833ce87cf);
+        
+    
+        var popup_701a865edda44832b75b2529d8efbae9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d8d0cf4c2669426798905f935439d64c = $(`<div id="html_d8d0cf4c2669426798905f935439d64c" style="width: 100.0%; height: 100.0%;">Old companies free zone</div>`)[0];
+            popup_701a865edda44832b75b2529d8efbae9.setContent(html_d8d0cf4c2669426798905f935439d64c);
+        
+
+        circle_922244d446ea4bc0ba5ee7e3b0499835.bindPopup(popup_701a865edda44832b75b2529d8efbae9)
+        ;
+
+        
+    
+    
+            var marker_fb5a2460a3254fcd965ec075538c03f3 = L.marker(
+                [34.15811807, -118.4243443],
+                {"radius": 2}
+            ).addTo(map_130d872a61934953a0627e0833ce87cf);
+        
+    
+            var icon_90279a782f8f4e07ad3d39cec8e7b5d2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "coffee", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_fb5a2460a3254fcd965ec075538c03f3.setIcon(icon_90279a782f8f4e07ad3d39cec8e7b5d2);
+        
+    
+        var popup_f57849ccdd1d4457b657a88dc8e4ecdb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f186ece63780496d939ac623299db40e = $(`<div id="html_f186ece63780496d939ac623299db40e" style="width: 100.0%; height: 100.0%;"><b>[Starbucks]</b></div>`)[0];
+            popup_f57849ccdd1d4457b657a88dc8e4ecdb.setContent(html_f186ece63780496d939ac623299db40e);
+        
+
+        marker_fb5a2460a3254fcd965ec075538c03f3.bindPopup(popup_f57849ccdd1d4457b657a88dc8e4ecdb)
+        ;
+
+        
+    
+    
+            marker_fb5a2460a3254fcd965ec075538c03f3.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_63c472ac59874e858a32fe74da4fe8eb = L.marker(
+                [34.15728266805428, -118.41388747976333],
+                {"radius": 2}
+            ).addTo(map_130d872a61934953a0627e0833ce87cf);
+        
+    
+            var icon_047b9a4b08dd4b24a2a3195e871c9b5f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_63c472ac59874e858a32fe74da4fe8eb.setIcon(icon_047b9a4b08dd4b24a2a3195e871c9b5f);
+        
+    
+        var popup_cdb54443dc794e91b1be415c1aba5b00 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_003275bd4e9b42d9a430f81a94de52b3 = $(`<div id="html_003275bd4e9b42d9a430f81a94de52b3" style="width: 100.0%; height: 100.0%;"><b>[Vegan restaurant]</b> 'Hugo's Tacos'</div>`)[0];
+            popup_cdb54443dc794e91b1be415c1aba5b00.setContent(html_003275bd4e9b42d9a430f81a94de52b3);
+        
+
+        marker_63c472ac59874e858a32fe74da4fe8eb.bindPopup(popup_cdb54443dc794e91b1be415c1aba5b00)
+        ;
+
+        
+    
+    
+            marker_63c472ac59874e858a32fe74da4fe8eb.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_468748a5e29c4f759f584eb60b1c83d0 = L.marker(
+                [34.158044, -118.415597],
+                {"radius": 2}
+            ).addTo(map_130d872a61934953a0627e0833ce87cf);
+        
+    
+            var icon_e98e7c1f3a544e43aeff4dda6ffe8e6f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glass", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_468748a5e29c4f759f584eb60b1c83d0.setIcon(icon_e98e7c1f3a544e43aeff4dda6ffe8e6f);
+        
+    
+        var popup_334149cf4014439ba07d834d382de835 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ddd20b8829354e2aae4dba306db0828e = $(`<div id="html_ddd20b8829354e2aae4dba306db0828e" style="width: 100.0%; height: 100.0%;"><b>[Night club]</b> 'Dykeden - Vomit?'</div>`)[0];
+            popup_334149cf4014439ba07d834d382de835.setContent(html_ddd20b8829354e2aae4dba306db0828e);
+        
+
+        marker_468748a5e29c4f759f584eb60b1c83d0.bindPopup(popup_334149cf4014439ba07d834d382de835)
+        ;
+
+        
+    
+    
+            marker_468748a5e29c4f759f584eb60b1c83d0.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e3a398c8eccd4c1c81b71ef75e7244d4 = L.marker(
+                [34.200698852539055, -118.35900115966795],
+                {"radius": 2}
+            ).addTo(map_130d872a61934953a0627e0833ce87cf);
+        
+    
+            var icon_1e131295febe4224987ab14722fb30c9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_e3a398c8eccd4c1c81b71ef75e7244d4.setIcon(icon_1e131295febe4224987ab14722fb30c9);
+        
+    
+        var popup_03990cb201e843daa3960726b73337c6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3ebda33064424d56a8f9c6ea073f80e8 = $(`<div id="html_3ebda33064424d56a8f9c6ea073f80e8" style="width: 100.0%; height: 100.0%;"><b>[Airport]</b> 'Bob Hope Airport'. Distance from the office: 7 km</div>`)[0];
+            popup_03990cb201e843daa3960726b73337c6.setContent(html_3ebda33064424d56a8f9c6ea073f80e8);
+        
+
+        marker_e3a398c8eccd4c1c81b71ef75e7244d4.bindPopup(popup_03990cb201e843daa3960726b73337c6)
+        ;
+
+        
+    
+    
+            marker_e3a398c8eccd4c1c81b71ef75e7244d4.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_24a1b69201f44998a054758f4f686fcf = L.marker(
+                [34.209800720215, -118.48999786376999],
+                {"radius": 2}
+            ).addTo(map_130d872a61934953a0627e0833ce87cf);
+        
+    
+            var icon_07a10fd27bfa4637b262de56bfcca4d7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_24a1b69201f44998a054758f4f686fcf.setIcon(icon_07a10fd27bfa4637b262de56bfcca4d7);
+        
+    
+        var popup_1608e21c19a44e6b981cd11f41334ed1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6d31ff263f14428ba571cbf73bfc525b = $(`<div id="html_6d31ff263f14428ba571cbf73bfc525b" style="width: 100.0%; height: 100.0%;"><b>[Airport]</b> 'Van Nuys Airport'. Distance from the office: 8 km</div>`)[0];
+            popup_1608e21c19a44e6b981cd11f41334ed1.setContent(html_6d31ff263f14428ba571cbf73bfc525b);
+        
+
+        marker_24a1b69201f44998a054758f4f686fcf.bindPopup(popup_1608e21c19a44e6b981cd11f41334ed1)
+        ;
+
+        
+    
+    
+            marker_24a1b69201f44998a054758f4f686fcf.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d758565f6daf41bfbb26507eaa4f419d = L.marker(
+                [34.015800476100004, -118.45099639899999],
+                {"radius": 2}
+            ).addTo(map_130d872a61934953a0627e0833ce87cf);
+        
+    
+            var icon_da9af3405de2401b917d02a2f69a8c51 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_d758565f6daf41bfbb26507eaa4f419d.setIcon(icon_da9af3405de2401b917d02a2f69a8c51);
+        
+    
+        var popup_3c6c4b95acb64dfca25bf6ea5bd2a90b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_07106dd8d2c74b42baf367f4ae2fac8d = $(`<div id="html_07106dd8d2c74b42baf367f4ae2fac8d" style="width: 100.0%; height: 100.0%;"><b>[Airport]</b> 'Santa Monica Municipal Airport'. Distance from the office: 15 km</div>`)[0];
+            popup_3c6c4b95acb64dfca25bf6ea5bd2a90b.setContent(html_07106dd8d2c74b42baf367f4ae2fac8d);
+        
+
+        marker_d758565f6daf41bfbb26507eaa4f419d.bindPopup(popup_3c6c4b95acb64dfca25bf6ea5bd2a90b)
+        ;
+
+        
+    
+    
+            marker_d758565f6daf41bfbb26507eaa4f419d.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0541b96f537a4feb9fa5a758297cbbc9 = L.marker(
+                [34.2593002319, -118.413002014],
+                {"radius": 2}
+            ).addTo(map_130d872a61934953a0627e0833ce87cf);
+        
+    
+            var icon_fee92560817346b78a1a048be9fa146b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_0541b96f537a4feb9fa5a758297cbbc9.setIcon(icon_fee92560817346b78a1a048be9fa146b);
+        
+    
+        var popup_f372f5ab308f490d98527b7b99dfb017 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_df91b468fdc04fc0ad375ddec4f8639b = $(`<div id="html_df91b468fdc04fc0ad375ddec4f8639b" style="width: 100.0%; height: 100.0%;"><b>[Airport]</b> 'Whiteman Airport'. Distance from the office: 11 km</div>`)[0];
+            popup_f372f5ab308f490d98527b7b99dfb017.setContent(html_df91b468fdc04fc0ad375ddec4f8639b);
+        
+
+        marker_0541b96f537a4feb9fa5a758297cbbc9.bindPopup(popup_f372f5ab308f490d98527b7b99dfb017)
+        ;
+
+        
+    
+    
+            marker_0541b96f537a4feb9fa5a758297cbbc9.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d188cdcb48a94605af5a8c80d12d8908 = L.marker(
+                [34.158171117881, -118.4298308330254],
+                {"radius": 2}
+            ).addTo(map_130d872a61934953a0627e0833ce87cf);
+        
+    
+            var icon_b4b8a4637f354363b5e23591ec0bd5a3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "gray", "prefix": "fa"}
+            );
+            marker_d188cdcb48a94605af5a8c80d12d8908.setIcon(icon_b4b8a4637f354363b5e23591ec0bd5a3);
+        
+    
+        var popup_2376e796d58b4234a4e330d1a4df3574 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_736a5a0ed3b340b9a29c26ff244f1210 = $(`<div id="html_736a5a0ed3b340b9a29c26ff244f1210" style="width: 100.0%; height: 100.0%;"><b>[School]</b> 'Notre Dame High School'</div>`)[0];
+            popup_2376e796d58b4234a4e330d1a4df3574.setContent(html_736a5a0ed3b340b9a29c26ff244f1210);
+        
+
+        marker_d188cdcb48a94605af5a8c80d12d8908.bindPopup(popup_2376e796d58b4234a4e330d1a4df3574)
+        ;
+
+        
+    
+    
+            marker_d188cdcb48a94605af5a8c80d12d8908.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3a5fddf68e75431cb128ea34f3283ccb = L.marker(
+                [34.15761, -118.424058],
+                {"radius": 2}
+            ).addTo(map_130d872a61934953a0627e0833ce87cf);
+        
+    
+            var icon_08968034efa14902adc36ce6d596cabb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3a5fddf68e75431cb128ea34f3283ccb.setIcon(icon_08968034efa14902adc36ce6d596cabb);
+        
+    
+        var popup_e5cd664625e24c83aadbcf54e6ea87b9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3632dbefc51348409a3b95abfef9a3be = $(`<div id="html_3632dbefc51348409a3b95abfef9a3be" style="width: 100.0%; height: 100.0%;"><b>Perfect location for your business</b></div>`)[0];
+            popup_e5cd664625e24c83aadbcf54e6ea87b9.setContent(html_3632dbefc51348409a3b95abfef9a3be);
+        
+
+        marker_3a5fddf68e75431cb128ea34f3283ccb.bindPopup(popup_e5cd664625e24c83aadbcf54e6ea87b9)
+        ;
+
+        
+    
+    
+            marker_3a5fddf68e75431cb128ea34f3283ccb.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1966a777f4674f6b957e554780937a71 = L.marker(
+                [34.153588, -118.422495],
+                {"radius": 2}
+            ).addTo(map_130d872a61934953a0627e0833ce87cf);
+        
+    
+            var icon_3cf2144573d54194956c9210fe5f7a2a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "building-o", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_1966a777f4674f6b957e554780937a71.setIcon(icon_3cf2144573d54194956c9210fe5f7a2a);
+        
+    
+        var popup_70d323be26d04da2b0ccc66fccb1bd75 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fab902e3c3734412a001a0193936a7ef = $(`<div id="html_fab902e3c3734412a001a0193936a7ef" style="width: 100.0%; height: 100.0%;"><b>[Startup]</b> AudioMicro. Founded year: 2008. Category: Games video. Total money raised (USD): 1250000.</div>`)[0];
+            popup_70d323be26d04da2b0ccc66fccb1bd75.setContent(html_fab902e3c3734412a001a0193936a7ef);
+        
+
+        marker_1966a777f4674f6b957e554780937a71.bindPopup(popup_70d323be26d04da2b0ccc66fccb1bd75)
+        ;
+
+        
+    
+    
+            marker_1966a777f4674f6b957e554780937a71.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
