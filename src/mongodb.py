@@ -1,5 +1,5 @@
 
-from pymongo import MongoClient
+from pymongo import MongoClient, GEOSPHERE
 
 client = MongoClient("mongodb://localhost:27017/") # Establishing the connection with MongoDB
 
@@ -29,7 +29,10 @@ def getCompaniesNear(longitude, latitude, max_distance_m=2000):
     Returns all companies close to a certain longitude and latitude.
     Maximum distance defaults to 2km.
     '''
-    db, coll = connectCollection('companies','companies_cleaned')
+    
+    db, coll = connectCollection('bigDataProject','companies_cleaned')
+    coll.create_index([("office_1_location", GEOSPHERE)])
+
     return list(coll.find(
     {"office_1_location":{"$near":{"$geometry":{"type":"Point","coordinates":[longitude,latitude]},
                                    "$maxDistance":max_distance_m}}}))

@@ -77,7 +77,6 @@ def main():
     companies_df.total_money_raised.replace('$0','0', inplace=True)
     companies_df['total_money_raised_currency'] = [None] * len(num_offices)
 
-    print(companies_df['total_money_raised'][:10])
 
     for i in range(len(companies_df)):
         if companies_df.at[i,'total_money_raised'] == '0':
@@ -120,7 +119,6 @@ def main():
 
     # Currency exchange from an API:
     companies_df_final = companies_df[companies_df.num_offices>=0]
-    print(companies_df_final[540:552])
 
     exchangerateGBP = exchangerate_api_request('GBP').json()
     exchangerateSEK = exchangerate_api_request('SEK').json()
@@ -129,7 +127,6 @@ def main():
     companies_df_final['total_money_raised_USD'] = [0.0]*len(companies_df_final)
 
     for i in range(len(companies_df_final)):
-        # if(i in df.)
         if companies_df_final.at[i,'total_money_raised_currency'] == 'USD':
             companies_df_final.at[i,'total_money_raised_USD'] = companies_df_final.at[i,'total_money_raised']
         elif companies_df_final.at[i,'total_money_raised_currency'] == 'GBP':
@@ -142,13 +139,17 @@ def main():
     ########################################################################################################
 
     # Exporting cleaned csv:
+    companies_df_final.drop(['_id'], axis=1, inplace=True)
     companies_df_final.to_csv('./input/companies_df.csv', index=False)
     companies_df_final.to_json('./input/cleaned_companies.json', orient="records")
+
+    print("here")
 
     ########################################################################################################
 
     # Importing cleaned data to MongoDB and creating 2dSphere index:
     coll2 = db['companies_cleaned']
+    coll2.create_index([("office_1_location", GEOSPHERE)])
     coll2.insert_many(companies_df_final.to_dict('records'))
 
     # I think it could be done with this command, but I've done it from MongoDB Compass.

@@ -1,4 +1,3 @@
-
 import pandas as pd
 import numpy as np
 import geopy.distance
@@ -20,7 +19,7 @@ def set_key(dictionary, key, value):
 def valuesInCommon(List1, List2):
     aux = []
     for e in List1:
-        if e not in List2:
+        if e in List2:
             aux.append(e)
     return aux
 
@@ -37,13 +36,16 @@ def getOfficesCoords(officesID, collection):
 def cleanVenueList(venueList):
     aux = []
     for i in range(len(venueList)):
-        if len(venueList[i][1]['response']['venues']) > 0:
+        # print(venueList[i])
+        # print(venueList[i][0])
+        # print(venueList[i][1])
+        if len(venueList[i][1]["results"]) > 0:
             aux.append([venueList[i][0],
-                venueList[i][1]['response']['venues'][0]['location']['lat'],
-                venueList[i][1]['response']['venues'][0]['location']['lng'],
-                venueList[i][1]['response']['venues'][0]['location']['distance'],
-                venueList[i][1]['response']['venues'][0]['location']['formattedAddress'],
-                venueList[i][1]['response']['venues'][0]['name']])
+                venueList[i][1]["results"][0]['geocodes']['main']['latitude'],
+                venueList[i][1]["results"][0]['geocodes']['main']['longitude'],
+                venueList[i][1]["results"][0]['distance'],
+                venueList[i][1]["results"][0]['location']['formatted_address'],
+                venueList[i][1]["results"][0]['name']])
     return aux
 
 
@@ -51,7 +53,7 @@ def getLatVenue(venueList, df):
     latitude = []
     for j in range(len(df)):
         for i in range(len(venueList)):
-            if df.iloc[j][0] == str(venueList[i][0]):
+            if df.iloc[j][0] == venueList[i][0]:
                 latitude.append(venueList[i][1])
     return latitude
     
@@ -60,7 +62,7 @@ def getLongVenue(venueList, df):
     longitude = []
     for j in range(len(df)):
         for i in range(len(venueList)):
-            if df.iloc[j][0] == str(venueList[i][0]):
+            if df.iloc[j][0] == venueList[i][0]:
                 longitude.append(venueList[i][2])   
     return longitude
 
@@ -69,7 +71,7 @@ def getDistanceVenue(venueList, df):
     distance = []
     for j in range(len(df)):
         for i in range(len(venueList)):
-            if df.iloc[j][0] == str(venueList[i][0]):
+            if df.iloc[j][0] == venueList[i][0]:
                 distance.append(venueList[i][3])     
     return distance
 
@@ -78,7 +80,7 @@ def getNameVenue(venueList, df):
     name = []
     for j in range(len(df)):
         for i in range(len(venueList)):
-            if df.iloc[j][0] == str(venueList[i][0]):
+            if df.iloc[j][0] == venueList[i][0]:
                 name.append(venueList[i][5])    
     return name
 

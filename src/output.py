@@ -7,7 +7,7 @@ from pathlib import Path
 import webbrowser
 
 
-def foliumMap(company,starbucks,vegan,veg_name,party,par_name,name_dist_lat_long_airport,school,sch_name,
+def foliumMap(company,starbucks,vegan,veg_name,party,par_name, school,sch_name,
 near_startups):
     tooltip = 'Click me!'
     map_city = folium.Map(location = company, zoom_start=11)
@@ -22,11 +22,7 @@ near_startups):
     folium.Marker(party,radius=2,icon=folium.Icon(
         icon='glass',color='purple'),popup=f"<b>[Night club]</b> '{par_name}'",
         tooltip=tooltip).add_to(map_city)
-    for i in range(0,len(name_dist_lat_long_airport),4):
-        folium.Marker([name_dist_lat_long_airport[i+2],name_dist_lat_long_airport[i+3]],radius=2,icon=folium.Icon(
-            icon='plane', prefix='fa',color='blue'),
-            popup=f"<b>[Airport]</b> '{name_dist_lat_long_airport[i+0]}'. Distance from the office: {int(name_dist_lat_long_airport[i+1])} km",
-            tooltip=tooltip).add_to(map_city)
+    
     folium.Marker(school,radius=2,icon=folium.Icon(
         icon='graduation-cap', prefix='fa',color='gray'),popup=f"<b>[School]</b> '{sch_name}'",
         tooltip=tooltip).add_to(map_city)
@@ -51,7 +47,7 @@ init()
 from colorama import Fore, Back, Style
 
 
-def printoutput(a,b,c,d,e,f,g,h,i,j,k,l):
+def printoutput(a,b,c,d,e,f,g,h,i,k,l):
     print(Fore.MAGENTA + '''
 
 
@@ -71,9 +67,6 @@ def printoutput(a,b,c,d,e,f,g,h,i,j,k,l):
 
         Party mood? You will find the night club called '{h}'
         just {i} m from the office.
-
-        If you need to travel often, there is no problem. You have {j} airport/s within 20 km
-        from the office.
 
         And if that were not enough, your children could go to school ({k})
         just {l} m from the office.
